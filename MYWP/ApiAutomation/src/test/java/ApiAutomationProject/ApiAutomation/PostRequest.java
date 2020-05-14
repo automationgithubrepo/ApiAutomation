@@ -72,7 +72,6 @@ public class PostRequest
 		BodyData.setPost("Engineer");
 		BodyData.setAge("25");
 		BodyData.setAddress("IND");
-		
 		Response PojoRes=given().contentType(ContentType.JSON).body(BodyData).when()
 				.post ("http://localhost:3000/friends");
 		
