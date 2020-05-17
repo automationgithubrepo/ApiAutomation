@@ -7,6 +7,8 @@ import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBodyData;
 
+import BodyDataCreation.Address;
+import BodyDataCreation.BasicDetails;
 import BodyDataCreation.Org_Json;
 import BodyDataCreation.Pojo;
 public class PostRequest
@@ -66,17 +68,30 @@ public class PostRequest
 	@Test(priority =2)
 	public static void UsingPojo()
 	{
-		Pojo BodyData= new Pojo();
-		BodyData.setId("LAL");
-		BodyData.setName("Amit");
-		BodyData.setPost("Engineer");
-		BodyData.setAge("25");
-		BodyData.setAddress("IND");
-		Response PojoRes=given().contentType(ContentType.JSON).body(BodyData).when()
+		Address[] add= new Address[2];
+		add[0] = new Address();
+		add[0].setHouseNo("1");
+		add[0].setLaneNo("2");
+		add[0].setStreet("4");
+		
+		add[1] = new Address();
+		add[1].setHouseNo("4");
+		add[1].setLaneNo("6");
+		add[1].setStreet("8");
+		
+		BasicDetails bd= new BasicDetails();
+		bd.setId("101");
+		bd.setName("Amit");
+		bd.setPost("E");
+		bd.setAge("25");
+		bd.setAdress(add);
+		
+
+		Response PojoRes=given().contentType(ContentType.JSON).body(bd).when()
 				.post ("http://localhost:3000/friends");
 		
 		System.out.println("Status code is " + PojoRes.statusCode());
-		System.out.println("...............CompJson Data is ...............");
+		System.out.println("............... Data is ...............");
 		System.out.println(PojoRes.asString());
 		
 	}
