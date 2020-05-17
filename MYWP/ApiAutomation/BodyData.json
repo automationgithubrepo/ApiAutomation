@@ -1,0 +1,19 @@
+
+{
+    "id": 151,
+    "adress": [
+      {
+        "houseNo": "34",
+        "laneNo": "56",
+        "street": "90"
+      },
+      {
+        "houseNo": "00",
+        "laneNo": "78",
+        "street": "8"
+      }
+    ],
+    "name": "Amit",
+    "post": "E",
+    "age": "25"
+  }

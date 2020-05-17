@@ -1,12 +1,17 @@
 package ApiAutomationProject.ApiAutomation;
 import static com.jayway.restassured.RestAssured.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.annotations.Test;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBodyData;
-
 import BodyDataCreation.Address;
 import BodyDataCreation.BasicDetails;
 import BodyDataCreation.Org_Json;
@@ -65,7 +70,7 @@ public class PostRequest
 		System.out.println("...............CompJson Data is ...............");
 		System.out.println(ResComplex.asString());
 	}
-	@Test(priority =2)
+	//@Test(priority =2)
 	public static void UsingPojo()
 	{
 		Address[] add= new Address[2];
@@ -95,4 +100,25 @@ public class PostRequest
 		System.out.println(PojoRes.asString());
 		
 	}
+	@Test(priority =3)
+	public static void DataThruJsonfile() throws FileNotFoundException
+	{
+		
+	File f= new File("../ApiAutomation/BodyData.json");
+	FileReader fr= new FileReader(f);
+	JSONTokener JT= new JSONTokener(fr);
+	JSONObject JO= new JSONObject(JT);
+	 System.out.println("Data Ready For Post Request");
+	 System.out.println(JO.toString());
+	
+		Response PojoRes=given().contentType(ContentType.JSON).body(JO.toString()).when()
+				.post ("http://localhost:3000/friends");
+		
+		System.out.println("Status code is " + PojoRes.statusCode());
+		System.out.println("............... Data is ...............");
+		System.out.println(PojoRes.asString());	
+		
+	
+	}
+	
 }
