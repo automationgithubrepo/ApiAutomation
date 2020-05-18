@@ -5,7 +5,7 @@
     <classes>
       <class name="ApiAutomationProject.ApiAutomation.PostRequest">
         <methods>
-          <include name="UsingPojo"/>
+          <include name="DataThruJsonfile"/>
         </methods>
       </class> <!-- ApiAutomationProject.ApiAutomation.PostRequest -->
     </classes>

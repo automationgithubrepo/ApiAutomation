@@ -4,7 +4,6 @@ import static com.jayway.restassured.RestAssured.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;

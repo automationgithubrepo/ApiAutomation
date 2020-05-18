@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2563" started-at="2020-05-17T16:13:02Z" finished-at="2020-05-17T16:13:05Z">
+  <suite name="Default suite" duration-ms="2091" started-at="2020-05-17T16:56:46Z" finished-at="2020-05-17T16:56:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2563" started-at="2020-05-17T16:13:02Z" finished-at="2020-05-17T16:13:05Z">
+    <test name="Default test" duration-ms="2091" started-at="2020-05-17T16:56:46Z" finished-at="2020-05-17T16:56:48Z">
       <class name="ApiAutomationProject.ApiAutomation.PostRequest">
-        <test-method status="PASS" signature="UsingPojo()[pri:2, instance:ApiAutomationProject.ApiAutomation.PostRequest@548a9f61]" name="UsingPojo" duration-ms="2520" started-at="2020-05-17T21:43:02Z" finished-at="2020-05-17T21:43:05Z">
+        <test-method status="PASS" signature="DataThruJsonfile()[pri:3, instance:ApiAutomationProject.ApiAutomation.PostRequest@548a9f61]" name="DataThruJsonfile" duration-ms="2044" started-at="2020-05-17T22:26:46Z" finished-at="2020-05-17T22:26:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UsingPojo -->
+        </test-method> <!-- DataThruJsonfile -->
       </class> <!-- ApiAutomationProject.ApiAutomation.PostRequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
