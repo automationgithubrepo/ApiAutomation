@@ -4,6 +4,8 @@ import static com.jayway.restassured.RestAssured.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.regex.Pattern;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
@@ -99,7 +101,7 @@ public class PostRequest
 		System.out.println(PojoRes.asString());
 		
 	}
-	@Test(priority =3)
+	//@Test(priority =3)
 	public static void DataThruJsonfile() throws FileNotFoundException
 	{
 		
@@ -116,8 +118,40 @@ public class PostRequest
 		System.out.println("Status code is " + PojoRes.statusCode());
 		System.out.println("............... Data is ...............");
 		System.out.println(PojoRes.asString());	
-		
-	
 	}
+	//@Test(priority =4)
+	public static void PostRequestWithDataThroughVariables() throws FileNotFoundException
+	{
+		File f= new File("../ApiAutomation/BodyData.json");
+		FileReader fr= new FileReader(f);
+		JSONTokener JT= new JSONTokener(fr);
+		JSONObject JO= new JSONObject(JT);
+		String BodyData= JO.toString();
+		BodyData=BodyData.replaceAll(Pattern.quote("{{"+"id"+"}}"), "7891");
+		BodyData=BodyData.replaceAll(Pattern.quote("{{"+"HN"+"}}"), "1");
+		BodyData=BodyData.replaceAll(Pattern.quote("{{"+"LN"+"}}"), "2");
+		BodyData=BodyData.replaceAll(Pattern.quote("{{"+"ST"+"}}"), "3");
+		 System.out.println("Data Ready For Post Request");
+		 System.out.println(BodyData);
+Response PojoRes=given().contentType(ContentType.JSON).body(BodyData.toString()).when()
+.post ("http://localhost:3000/friends");
+			System.out.println("Status code is " + PojoRes.statusCode());
+			System.out.println("............... Data is ...............");
+			System.out.println(PojoRes.asString());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
