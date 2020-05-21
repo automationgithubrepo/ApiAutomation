@@ -139,8 +139,24 @@ Response PojoRes=given().contentType(ContentType.JSON).body(BodyData.toString())
 			System.out.println("............... Data is ...............");
 			System.out.println(PojoRes.asString());
 	}
-	
-	
+	@Test(priority= 5)
+	public static void ExtractPostalCodeValueAndphoneNumbersFrom() throws FileNotFoundException
+	{
+		File f= new File("../ApiAutomation/BodyData.json");
+		FileReader fr= new FileReader(f);
+		JSONTokener JT= new JSONTokener(fr);
+		JSONObject JO= new JSONObject(JT);
+		String PostCode= JO.getJSONObject("address").getString("postalCode");
+		System.out.println("Postal Code is " + PostCode);
+		JSONArray JA=JO.getJSONArray("phoneNumbers");
+		int l= JA.length();
+		for(int i=0;i<l;i++)
+		{
+			String type= JA.getJSONObject(i).getString("type");
+			System.out.println("Extracted Value of type is " + type);
+		}
+		
+	}
 	
 	
 	

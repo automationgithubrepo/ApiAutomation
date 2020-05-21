@@ -12,6 +12,7 @@ public class GetRequest
 
 	public static void main(String[] args) 
 	{
+//extract something using org.json(Postal Code Value)
 	Response Res=	
 	 given()
 	 .contentType(ContentType.JSON)
