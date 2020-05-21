@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2130" started-at="2020-05-21T16:43:06Z" finished-at="2020-05-21T16:43:08Z">
+  <suite name="Default suite" duration-ms="68" started-at="2020-05-21T20:01:19Z" finished-at="2020-05-21T20:01:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2130" started-at="2020-05-21T16:43:06Z" finished-at="2020-05-21T16:43:08Z">
+    <test name="Default test" duration-ms="68" started-at="2020-05-21T20:01:19Z" finished-at="2020-05-21T20:01:19Z">
       <class name="ApiAutomationProject.ApiAutomation.PostRequest">
-        <test-method status="PASS" signature="DataThruJsonfile()[pri:3, instance:ApiAutomationProject.ApiAutomation.PostRequest@548a9f61]" name="DataThruJsonfile" duration-ms="2096" started-at="2020-05-21T22:13:06Z" finished-at="2020-05-21T22:13:08Z">
+        <test-method status="PASS" signature="ExtractPostalCodeValueAndphoneNumbersFrom()[pri:5, instance:ApiAutomationProject.ApiAutomation.PostRequest@548a9f61]" name="ExtractPostalCodeValueAndphoneNumbersFrom" duration-ms="28" started-at="2020-05-22T01:31:19Z" finished-at="2020-05-22T01:31:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DataThruJsonfile -->
+        </test-method> <!-- ExtractPostalCodeValueAndphoneNumbersFrom -->
       </class> <!-- ApiAutomationProject.ApiAutomation.PostRequest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
