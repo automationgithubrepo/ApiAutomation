@@ -37,5 +37,4 @@ public class FileLoad
 	String Data=obj2.toString();
 	return Data;
 	}
-	
 }
