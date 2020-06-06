@@ -35,6 +35,7 @@ public class PostRequest
 		System.out.println("Status code is " + ResSimple.statusCode());
 		System.out.println("...............SimpleJson Data is ...............");
 		System.out.println(ResSimple.asString());
+		
 	}
 	//@Test(priority =1)
 	public static void RunComplexJson()
