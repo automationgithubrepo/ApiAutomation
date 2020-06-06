@@ -17,8 +17,6 @@ public class PostRequestTC {
     HTTPMethods http= new HTTPMethods(p);
 	Response res= http.PostRequest(body, "Friends");
 	System.out.println("Status code is"+ res.statusCode());
-	
-
 	}
 
 }
