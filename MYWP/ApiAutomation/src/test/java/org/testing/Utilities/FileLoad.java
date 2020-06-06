@@ -11,26 +11,26 @@ import org.json.JSONTokener;
 
 public class FileLoad 
 {
-	public static Properties propertiesLoad(String Path) throws IOException
+	public static Properties propertiesLoad(String PropPath) throws IOException
 	{
-	File f=new File(Path);
+	File f=new File(PropPath);
 	FileInputStream fi=new FileInputStream(f);
 	Properties pr=new Properties();
 	pr.load(fi);
 	return pr;
 	}
-	public static String JsonObjectData(String path) throws FileNotFoundException
+	public static String JsonObjectData(String JSObjpath) throws FileNotFoundException
 	{
-	File f=new File(path);
+	File f=new File(JSObjpath);
 	FileInputStream fi=new FileInputStream(f);
 	JSONTokener js=new JSONTokener(fi);
 	JSONObject obj=new JSONObject(js);
 	String Data=obj.toString();
 	return Data;
 	}
-	public static String JsonArrayData(String path) throws FileNotFoundException
+	public static String JsonArrayData(String JSArraypath) throws FileNotFoundException
 	{
-	File f=new File(path);
+	File f=new File(JSArraypath);
 	FileInputStream fi=new FileInputStream(f);
 	JSONTokener js=new JSONTokener(fi);
 	JSONArray obj2=new JSONArray(js);
