@@ -19,9 +19,9 @@ public class FileLoad
 	pr.load(fi);
 	return pr;
 	}
-	public static String JsonObjectData(String JSObjpath) throws FileNotFoundException
+	public static String JsonData(String JSONpath) throws FileNotFoundException
 	{
-	File f=new File(JSObjpath);
+	File f=new File(JSONpath);
 	FileInputStream fi=new FileInputStream(f);
 	JSONTokener js=new JSONTokener(fi);
 	JSONObject obj=new JSONObject(js);
