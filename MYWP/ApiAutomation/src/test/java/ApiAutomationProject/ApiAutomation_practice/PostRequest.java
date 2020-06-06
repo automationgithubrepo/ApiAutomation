@@ -1,4 +1,4 @@
-package ApiAutomationProject.ApiAutomation;
+package ApiAutomationProject.ApiAutomation_practice;
 import static com.jayway.restassured.RestAssured.*;
 
 import java.io.File;
@@ -13,10 +13,11 @@ import org.testng.annotations.Test;
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.response.Response;
 import com.jayway.restassured.response.ResponseBodyData;
-import BodyDataCreation.Address;
-import BodyDataCreation.BasicDetails;
-import BodyDataCreation.Org_Json;
-import BodyDataCreation.Pojo;
+
+import BodyDataCreation_practice.Address;
+import BodyDataCreation_practice.BasicDetails;
+import BodyDataCreation_practice.Org_Json;
+import BodyDataCreation_practice.Pojo;
 public class PostRequest
 {
 	//@Test

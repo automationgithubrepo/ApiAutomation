@@ -1,4 +1,4 @@
-package ApiAutomationProject.ApiAutomation;
+package ApiAutomationProject.ApiAutomation_practice;
 
 import static com.jayway.restassured.RestAssured.*;
 

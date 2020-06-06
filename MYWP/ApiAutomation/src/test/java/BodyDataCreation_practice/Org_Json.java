@@ -1,4 +1,4 @@
-package BodyDataCreation;
+package BodyDataCreation_practice;
 
 import org.json.JSONObject;
 
