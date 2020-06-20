@@ -26,6 +26,7 @@ public class PostRequestTC
 	ResponseStatusCodeValidate.ResponseStatusValidate(201, res);
 	ResponseDataValidationUsingJsonPath.responseData("Amit", res, "firstName");
 	System.out.println("JsonData is "+ res.asString());
+	
 	}
 
 }
