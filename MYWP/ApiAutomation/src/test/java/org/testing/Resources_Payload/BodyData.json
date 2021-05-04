@@ -1,21 +1,21 @@
 {
   "id": "{{id}}",
   "firstName": "Amit",
-  "lastName" : "Mishra",
-  "age"      : 26,
+  "lastName" : "Nikhil",
+  "age"      : "{{age}}",
   "address"  : {
-    "streetAddress": "naist street",
-    "city"         : "Nara",
-    "postalCode"   : "630-0192"
+    "streetAddress": "Ashok Nagar",
+    "city"         : "New Delhi",
+    "postalCode"   : "349-393"
   },
   "phoneNumbers": [
     {
-      "type"  : "iPhone",
-      "number": "0123-4567-8888"
+      "type"  : "Realme",
+      "number": "939003993"
     },
     {
-      "type"  : "home",
-      "number": "0123-4567-8910"
+      "type"  : "Work",
+      "number": "{{num}}"
     }
   ]
 }
